@@ -1,0 +1,24 @@
+{
+  "name": "jquery.get-background-size.js",
+  "version": "1.0.0",
+  "description": "use like this ```html:import <script src=\"scripts/jquery.get-background-size.js\"></script> ```",
+  "main": "get-background-size.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itoufo/jquery.getBackgroundSize.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itoufo/jquery.getBackgroundSize.js/issues"
+  },
+  "homepage": "https://github.com/itoufo/jquery.getBackgroundSize.js#readme",
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+  }
+}
