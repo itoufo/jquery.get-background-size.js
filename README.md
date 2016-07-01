@@ -29,7 +29,7 @@ $(this).getBackgroundSize(callback);
 
 Selected Element is assigned in "this".
 
-```
+```js
 $(function(){
   $('#sample-auto-cover').getBackgroundSize(function(arg){
     $(this).before('<table class="table">' +
