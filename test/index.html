@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GetBackgroundSize Sample</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .sample{
+        background-image: url('https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200');
+        height: 300px;
+        width: 300px;
+      }
+
+      #sample-set-both{
+        background-size: 200px 400px;
+      }
+
+      #sample-auto-both{
+        background-size: auto;
+      }
+
+      #sample-auto-height{
+        background-size: 200px auto;
+      }
+
+      #sample-auto-width{
+        background-size: auto 400px;
+      }
+
+      #sample-auto-cover{
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>GetBackgroundSize Sample</h1>
+
+    <h2>Sample1. Size Given</h2>
+    <pre>
+      #sample1{
+        background-size: 200px 400px;
+      }
+    </pre>
+    <div class="sample" id="sample-set-both"></div>
+
+    <hr>
+    <h2>Sample2. Auto</h2>
+    <pre>
+      #sample-auto-both{
+        background-size: auto;
+      }
+    </pre>
+    <div class="sample" id="sample-auto-both"></div>
+
+    <hr>
+    <h2>Sample3. Auth-Height</h2>
+    <pre>
+      #sample-auto-height{
+        background-size: 200px auto;
+      }
+    </pre>
+    <div class="sample" id="sample-auto-height"></div>
+
+    <hr>
+    <h2>Sample4. Auto-Width</h2>
+    <pre>
+      #sample-auto-width{
+        background-size: auto 400px;
+      }
+    </pre>
+    <div class="sample" id="sample-auto-width"></div>
+
+    <hr>
+    <h2>Sample5. Cover</h2>
+    <pre>
+      #sample-auto-cover{
+        background-size: cover
+      }
+    </pre>
+    <div class="sample" id="sample-auto-cover"></div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="https://github.com/itoufo/jquery.get-background-size.js">
+        <p class="text-muted">jquery.get-background-size.js</p>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="../jquery.get-background-size.js"></script>
+  <script>
+    $(function(){
+      $('#sample-set-both').getBackgroundSize(function(arg){
+        $(this).after('<table class="table">' +
+          '<tr><th>width</th><th>height</th></tr>' +
+          '<tr><td>' + arg.width + '</td><td>'+ arg.height + '</td></tr>' +
+          '</table>');
+      });
+
+      $(function(){
+        $('#sample-auto-both').getBackgroundSize(function(arg){
+          $(this).after('<h3>js output</h3>' +
+            '<table class="table">' +
+            '<tr><th>width</th><th>height</th></tr>' +
+            '<tr><td>' + arg.width + '</td><td>'+ arg.height + '</td></tr>' +
+            '</table>');
+        });
+      });
+
+      $(function(){
+        $('#sample-auto-height').getBackgroundSize(function(arg){
+          $(this).after('<h3>js output</h3>' +
+            '<table class="table">' +
+            '<tr><th>width</th><th>height</th></tr>' +
+            '<tr><td>' + arg.width + '</td><td>'+ arg.height + '</td></tr>' +
+            '</table>');
+        });
+      });
+
+      $(function(){
+        $('#sample-auto-width').getBackgroundSize(function(arg){
+          $(this).after('<h3>js output</h3>' +
+            '<table class="table">' +
+            '<tr><th>width</th><th>height</th></tr>' +
+            '<tr><td>' + arg.width + '</td><td>'+ arg.height + '</td></tr>' +
+            '</table>');
+        });
+      });
+
+      $(function(){
+        $('#sample-auto-cover').getBackgroundSize(function(arg){
+          $(this).after('<h3>js output</h3>' +
+            '<table class="table">' +
+            '<tr><th>width</th><th>height</th></tr>' +
+            '<tr><td>' + arg.width + '</td><td>'+ arg.height + '</td></tr>' +
+            '</table>');
+        });
+      });
+
+    });
+  </script>
+  </body>
+</html>

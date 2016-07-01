@@ -4,7 +4,7 @@
   "description": "use like this ```html:import <script src=\"scripts/jquery.get-background-size.js\"></script> ```",
   "main": "get-background-size.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
     "jquery": "^3.0.0"
   },
   "devDependencies": {
+    "jasmine": "^2.4.1",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-html2js-preprocessor": "^1.0.0",
+    "karma-jasmine": "^1.0.2"
   }
 }
