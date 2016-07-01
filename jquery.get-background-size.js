@@ -90,12 +90,6 @@
       }
 
       if(_this.backgroundSize[0] == "cover") {
-
-        console.log(_this.$element.width());
-        console.log(_this.$element.height());
-        console.log(_this.width);
-        console.log(_this.height);
-
         /* 縦横比比較 */
         if(_this.$element.width()/_this.$element.height() > _this.width/_this.height){
           _this.width = _this.$element.width();
