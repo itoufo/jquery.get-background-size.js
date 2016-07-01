@@ -25,7 +25,7 @@ var callback = function(arg){
 $(this).getBackgroundSize(callback);
 ```
 
-## Refer Selected Element
+## Referring to Selected Element
 
 Selected Element is assigned in "this".
 
